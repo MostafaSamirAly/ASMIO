@@ -12,4 +12,5 @@ target 'ASMIO' do
   pod 'Toast-Swift'
   pod 'Alamofire'
   pod 'PromiseKit'
+  pod 'Cosmos'
 end

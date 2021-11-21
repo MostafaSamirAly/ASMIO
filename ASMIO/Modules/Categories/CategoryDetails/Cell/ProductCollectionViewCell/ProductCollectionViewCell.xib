@@ -22,7 +22,7 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rko-Fz-5Jw" customClass="RoundedView" customModule="ASMIO" customModuleProvider="target">
                         <rect key="frame" x="2" y="2" width="291" height="226"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3YD-r4-dTR" customClass="RoundedImageView" customModule="ASMIO" customModuleProvider="target">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3YD-r4-dTR" customClass="RoundedImageView" customModule="ASMIO" customModuleProvider="target">
                                 <rect key="frame" x="5" y="5" width="281" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="LVc-1F-WHL"/>
@@ -51,7 +51,7 @@
                                     <constraint firstAttribute="width" constant="32" id="WoE-j9-9G6"/>
                                 </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" image="not-favourite"/>
+                                <state key="normal" image="not-favorite"/>
                                 <connections>
                                     <action selector="favoriteButtonTapped:" destination="gTV-IL-0wX" eventType="touchUpInside" id="7q1-PG-8Ys"/>
                                 </connections>
@@ -128,7 +128,7 @@
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="Cart-Icon"/>
                                 <connections>
-                                    <action selector="addToCartTaped:" destination="gTV-IL-0wX" eventType="touchUpInside" id="hNs-Yq-Quq"/>
+                                    <action selector="addToCartTapped:" destination="gTV-IL-0wX" eventType="touchUpInside" id="12i-eP-0YR"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -188,9 +188,9 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="Cart-Icon" width="180" height="180"/>
+        <image name="Cart-Icon" width="96" height="100"/>
         <image name="icons8-color-mode-48" width="48" height="48"/>
-        <image name="not-favourite" width="20" height="18"/>
+        <image name="not-favorite" width="20" height="18"/>
         <namedColor name="GreenColor">
             <color red="0.15299999713897705" green="0.3529999852180481" blue="0.32499998807907104" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

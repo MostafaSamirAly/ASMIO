@@ -19,6 +19,7 @@ class MainTabBarController: UITabBarController {
             createProfileNavigationController()
         ]
         configureTabBar()
+        selectedIndex = 1
     }
     
     func configureTabBar() {

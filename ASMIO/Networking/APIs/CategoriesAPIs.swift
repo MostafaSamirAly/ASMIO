@@ -10,22 +10,22 @@ import Foundation
 import Alamofire
 
 enum CategoriesPaths {
-    static let productsInCategory = "products?category_id="
-    static let productDetails = "products/get?product_id="
+    static let productsInCategory = "products"
+    static let productDetails = "products/get"
     
 }
 
 enum CategoriesApi: Requestable {
     
-    case productsInCategory(categoryId: Int)
+    case productsInCategory(categoryId: Int,page: Int)
     case productDetails(productId: Int)
     
     var path: String {
         switch self {
-        case .productsInCategory(let categoryId):
-            return CategoriesPaths.productsInCategory + categoryId.description
+        case .productsInCategory:
+            return CategoriesPaths.productsInCategory
         case .productDetails(let productId):
-            return CategoriesPaths.productDetails + productId.description
+            return CategoriesPaths.productDetails
         }
     }
     
@@ -39,9 +39,16 @@ enum CategoriesApi: Requestable {
     }
     
     var parameters: Parameters? {
+        return nil
+    }
+    
+    var urlParameters: Parameters? {
         switch self {
-        default:
-            return nil
+        case .productsInCategory(let categoryId, let page):
+            return ["category_id": categoryId,
+                    "page": page]
+        case .productDetails(let productId):
+            return ["product_id": productId]
         }
     }
 }

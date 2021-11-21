@@ -10,6 +10,7 @@ import UIKit
 extension UIColor {
     
     static let tabBarBackground = UIColor(named: "TabBarBackGround")
+    static let backGroundColor = UIColor(named: "BackgroundColor")
     static let greenColor = UIColor(named: "GreenColor")
     
     convenience init(hexString: String) {
