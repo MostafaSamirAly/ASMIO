@@ -15,6 +15,7 @@
                 <outlet property="brandLabel" destination="qqa-x0-Iro" id="kCw-lm-hbN"/>
                 <outlet property="discountPercentageLabel" destination="1Tb-t1-auA" id="3wO-7D-7BW"/>
                 <outlet property="finalPriceLabel" destination="ALa-h9-ACd" id="Hw0-Pz-YB1"/>
+                <outlet property="imagePageControl" destination="0JO-Ux-1Zg" id="8Ng-KV-dfl"/>
                 <outlet property="imagesCollectionView" destination="Ulk-uD-HKA" id="Ghh-Pn-GUB"/>
                 <outlet property="offerDetailsView" destination="Aeb-9o-Wyt" id="lJQ-5k-XLG"/>
                 <outlet property="offersArrowImage" destination="P50-Qr-0SY" id="951-n8-Byl"/>
@@ -101,6 +102,9 @@
                                         <action selector="shareButtonTapped:" destination="-1" eventType="touchUpInside" id="TYD-nh-z6L"/>
                                     </connections>
                                 </button>
+                                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" hidesForSinglePage="YES" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="0JO-Ux-1Zg" customClass="DashPageControl" customModule="ASMIO" customModuleProvider="target">
+                                    <rect key="frame" x="129.5" y="294" width="155.5" height="26"/>
+                                </pageControl>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ldU-dV-ygT" customClass="TopRoundedView" customModule="ASMIO" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="330" width="414" height="305.5"/>
                                     <subviews>
@@ -224,7 +228,7 @@
                                                                     </constraints>
                                                                 </imageView>
                                                             </subviews>
-                                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                            <color key="backgroundColor" name="BackgroundColor"/>
                                                             <gestureRecognizers/>
                                                             <constraints>
                                                                 <constraint firstItem="rwh-Ri-swx" firstAttribute="leading" secondItem="y58-lo-DFz" secondAttribute="leading" id="cIq-Yx-avg"/>
@@ -247,7 +251,7 @@
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                             </subviews>
-                                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                            <color key="backgroundColor" name="BackgroundColor"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="bottom" secondItem="suH-kd-qS2" secondAttribute="bottom" constant="18" id="WUf-a7-gsT"/>
                                                                 <constraint firstAttribute="trailing" secondItem="suH-kd-qS2" secondAttribute="trailing" id="awy-eO-3hH"/>
@@ -284,7 +288,7 @@
                                                                     </constraints>
                                                                 </imageView>
                                                             </subviews>
-                                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                            <color key="backgroundColor" name="BackgroundColor"/>
                                                             <gestureRecognizers/>
                                                             <constraints>
                                                                 <constraint firstItem="Hkf-Y1-3f6" firstAttribute="top" secondItem="FI0-7j-UyO" secondAttribute="top" constant="18" id="3aF-Hj-UuP"/>
@@ -305,7 +309,7 @@
                                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                 </tableView>
                                                             </subviews>
-                                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                            <color key="backgroundColor" name="BackgroundColor"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="bottom" secondItem="9cE-t9-HZi" secondAttribute="bottom" constant="9" id="5Fa-st-U5e"/>
                                                                 <constraint firstItem="9cE-t9-HZi" firstAttribute="top" secondItem="lG2-Rk-Cav" secondAttribute="top" id="Yrv-Ta-P3Q"/>
@@ -344,7 +348,7 @@
                                                                     </constraints>
                                                                 </imageView>
                                                             </subviews>
-                                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                            <color key="backgroundColor" name="BackgroundColor"/>
                                                             <gestureRecognizers/>
                                                             <constraints>
                                                                 <constraint firstAttribute="trailing" secondItem="P50-Qr-0SY" secondAttribute="trailing" id="Kai-IN-gll"/>
@@ -367,7 +371,7 @@
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                             </subviews>
-                                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                            <color key="backgroundColor" name="BackgroundColor"/>
                                                             <constraints>
                                                                 <constraint firstItem="vfr-dv-FB9" firstAttribute="leading" secondItem="Aeb-9o-Wyt" secondAttribute="leading" id="K9I-NR-Rqa"/>
                                                                 <constraint firstAttribute="trailing" secondItem="vfr-dv-FB9" secondAttribute="trailing" id="Sop-NN-vy8"/>
@@ -404,7 +408,7 @@
                                                                     </constraints>
                                                                 </imageView>
                                                             </subviews>
-                                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                            <color key="backgroundColor" name="BackgroundColor"/>
                                                             <gestureRecognizers/>
                                                             <constraints>
                                                                 <constraint firstAttribute="bottom" secondItem="AOE-Dc-g2E" secondAttribute="bottom" constant="8" id="6kr-Jw-9bF"/>
@@ -474,7 +478,7 @@
                                                                     </state>
                                                                 </button>
                                                             </subviews>
-                                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                            <color key="backgroundColor" name="BackgroundColor"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="bottom" secondItem="XSU-f4-XG5" secondAttribute="bottom" constant="18" id="28O-Nt-MGl"/>
                                                                 <constraint firstItem="P8h-OY-Jrb" firstAttribute="centerY" secondItem="JsW-cS-fyT" secondAttribute="centerY" id="Azi-xg-fTd"/>
@@ -503,7 +507,7 @@
                                             </subviews>
                                         </stackView>
                                     </subviews>
-                                    <color key="backgroundColor" red="0.9882352941176471" green="0.9882352941176471" blue="0.9882352941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="backgroundColor" name="BackgroundColor"/>
                                     <constraints>
                                         <constraint firstItem="1Tb-t1-auA" firstAttribute="top" secondItem="ldU-dV-ygT" secondAttribute="top" constant="19" id="0Ct-Pu-z7D"/>
                                         <constraint firstItem="J3O-26-LzF" firstAttribute="centerY" secondItem="ALa-h9-ACd" secondAttribute="centerY" id="1FT-kB-Cct"/>
@@ -548,12 +552,14 @@
                                 <constraint firstItem="NiQ-0c-ygc" firstAttribute="leading" secondItem="cvE-u3-pfx" secondAttribute="leading" constant="18" id="FIb-Cd-jMp"/>
                                 <constraint firstAttribute="trailing" secondItem="ldU-dV-ygT" secondAttribute="trailing" id="OZN-qM-u86"/>
                                 <constraint firstItem="B0B-Hd-P3M" firstAttribute="leading" secondItem="HtH-4C-iCN" secondAttribute="trailing" constant="4" id="S2u-2j-9X7"/>
+                                <constraint firstItem="0JO-Ux-1Zg" firstAttribute="centerX" secondItem="cvE-u3-pfx" secondAttribute="centerX" id="TjD-Di-GyJ"/>
                                 <constraint firstItem="HtH-4C-iCN" firstAttribute="centerY" secondItem="NiQ-0c-ygc" secondAttribute="centerY" id="h53-AJ-opB"/>
                                 <constraint firstAttribute="trailing" secondItem="B0B-Hd-P3M" secondAttribute="trailing" constant="18" id="nmb-Zs-szG"/>
                                 <constraint firstItem="B0B-Hd-P3M" firstAttribute="centerY" secondItem="NiQ-0c-ygc" secondAttribute="centerY" id="o07-oe-FNJ"/>
                                 <constraint firstItem="Ulk-uD-HKA" firstAttribute="top" secondItem="cvE-u3-pfx" secondAttribute="top" id="pZw-mB-6fa"/>
                                 <constraint firstItem="NiQ-0c-ygc" firstAttribute="top" secondItem="cvE-u3-pfx" secondAttribute="top" constant="16" id="pgY-2M-yS7"/>
                                 <constraint firstItem="ldU-dV-ygT" firstAttribute="top" secondItem="Ulk-uD-HKA" secondAttribute="bottom" constant="-20" id="sOd-2i-1Bg"/>
+                                <constraint firstItem="ldU-dV-ygT" firstAttribute="top" secondItem="0JO-Ux-1Zg" secondAttribute="bottom" constant="10" id="stE-ia-CNU"/>
                                 <constraint firstAttribute="trailing" secondItem="Ulk-uD-HKA" secondAttribute="trailing" id="wu6-k8-uan"/>
                                 <constraint firstItem="Ulk-uD-HKA" firstAttribute="leading" secondItem="cvE-u3-pfx" secondAttribute="leading" id="zkR-b8-m08"/>
                             </constraints>
@@ -622,7 +628,7 @@
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <color key="backgroundColor" name="BackgroundColor"/>
             <constraints>
                 <constraint firstItem="Fq5-GW-Bie" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="RPM-rJ-GQn"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Fq5-GW-Bie" secondAttribute="bottom" id="VTc-SE-AIX"/>
@@ -656,11 +662,6 @@
             </connections>
         </tapGestureRecognizer>
     </objects>
-    <designables>
-        <designable name="9ix-dr-Ojc">
-            <size key="intrinsicContentSize" width="65" height="13"/>
-        </designable>
-    </designables>
     <resources>
         <image name="BackBtn" width="32" height="32"/>
         <image name="Cart" width="26" height="26"/>
@@ -671,7 +672,7 @@
         <image name="plus" width="35" height="35"/>
         <image name="share" width="32" height="32"/>
         <namedColor name="BackgroundColor">
-            <color red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.98000001907348633" green="0.98000001907348633" blue="0.98000001907348633" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="GreenColor">
             <color red="0.15299999713897705" green="0.3529999852180481" blue="0.32499998807907104" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -680,7 +681,7 @@
             <color red="0.63099998235702515" green="0.66299998760223389" blue="0.76499998569488525" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="SeperatorColor">
-            <color red="0.92941176470588238" green="0.92941176470588238" blue="0.92941176470588238" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.92900002002716064" green="0.92900002002716064" blue="0.92900002002716064" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

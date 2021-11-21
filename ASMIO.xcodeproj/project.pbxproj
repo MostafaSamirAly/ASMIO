@@ -60,6 +60,9 @@
 		56D45E22274AEA4000D005CC /* ReviewsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56D45E20274AEA4000D005CC /* ReviewsTableViewCell.xib */; };
 		56D45E25274AF33900D005CC /* SpecificationsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D45E23274AF33900D005CC /* SpecificationsTableViewCell.swift */; };
 		56D45E26274AF33900D005CC /* SpecificationsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56D45E24274AF33900D005CC /* SpecificationsTableViewCell.xib */; };
+		56D45E29274AFD7800D005CC /* DashPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D45E28274AFD7800D005CC /* DashPageControl.swift */; };
+		56D45E2F274B001600D005CC /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D45E2D274B001500D005CC /* ImageCollectionViewCell.swift */; };
+		56D45E30274B001600D005CC /* ImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56D45E2E274B001500D005CC /* ImageCollectionViewCell.xib */; };
 		5F93B1DA439BB5D4EC8C14D0 /* Pods_ASMIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D8A6175E384C7923A98475D /* Pods_ASMIO.framework */; };
 /* End PBXBuildFile section */
 
@@ -119,6 +122,9 @@
 		56D45E20274AEA4000D005CC /* ReviewsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReviewsTableViewCell.xib; sourceTree = "<group>"; };
 		56D45E23274AF33900D005CC /* SpecificationsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecificationsTableViewCell.swift; sourceTree = "<group>"; };
 		56D45E24274AF33900D005CC /* SpecificationsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SpecificationsTableViewCell.xib; sourceTree = "<group>"; };
+		56D45E28274AFD7800D005CC /* DashPageControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashPageControl.swift; sourceTree = "<group>"; };
+		56D45E2D274B001500D005CC /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		56D45E2E274B001500D005CC /* ImageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageCollectionViewCell.xib; sourceTree = "<group>"; };
 		6D8A6175E384C7923A98475D /* Pods_ASMIO.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ASMIO.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		78BDDCEF5DBE0E5C99ED5D3C /* Pods-ASMIO.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ASMIO.release.xcconfig"; path = "Target Support Files/Pods-ASMIO/Pods-ASMIO.release.xcconfig"; sourceTree = "<group>"; };
 		90B8779DA98919281BF244C0 /* Pods-ASMIO.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ASMIO.debug.xcconfig"; path = "Target Support Files/Pods-ASMIO/Pods-ASMIO.debug.xcconfig"; sourceTree = "<group>"; };
@@ -249,6 +255,7 @@
 		56B98F3727459D8B00AC67EE /* CustomUI */ = {
 			isa = PBXGroup;
 			children = (
+				56D45E27274AFD6100D005CC /* CustomPageControl */,
 				56D45E14274AC66500D005CC /* CustomLabel */,
 				56B98F5B27459D8B00AC67EE /* CustomTableViews */,
 				56B98F5D27459D8B00AC67EE /* CustomImageViews */,
@@ -458,6 +465,8 @@
 		56D45E1C274AE9FC00D005CC /* ImageCollectionViewCell */ = {
 			isa = PBXGroup;
 			children = (
+				56D45E2D274B001500D005CC /* ImageCollectionViewCell.swift */,
+				56D45E2E274B001500D005CC /* ImageCollectionViewCell.xib */,
 			);
 			path = ImageCollectionViewCell;
 			sourceTree = "<group>";
@@ -478,6 +487,14 @@
 				56D45E20274AEA4000D005CC /* ReviewsTableViewCell.xib */,
 			);
 			path = ReviewTableViewCell;
+			sourceTree = "<group>";
+		};
+		56D45E27274AFD6100D005CC /* CustomPageControl */ = {
+			isa = PBXGroup;
+			children = (
+				56D45E28274AFD7800D005CC /* DashPageControl.swift */,
+			);
+			path = CustomPageControl;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -544,6 +561,7 @@
 				56B98F2F27459CE900AC67EE /* Poppins-Regular.ttf in Resources */,
 				56D040D92747F0C5003F20AB /* ProductCollectionViewCell.xib in Resources */,
 				56B98EFA2745943D00AC67EE /* LaunchScreen.storyboard in Resources */,
+				56D45E30274B001600D005CC /* ImageCollectionViewCell.xib in Resources */,
 				56D45E22274AEA4000D005CC /* ReviewsTableViewCell.xib in Resources */,
 				56B98EF72745943D00AC67EE /* Assets.xcassets in Resources */,
 				56D040F1274981BE003F20AB /* SortTableViewCell.xib in Resources */,
@@ -611,6 +629,7 @@
 				56D040DC2747F98F003F20AB /* RoundedView.swift in Sources */,
 				56B98FA327459D8B00AC67EE /* UINavigationController+Ext.swift in Sources */,
 				56B98FC32745B26900AC67EE /* ProductDetailsViewController.swift in Sources */,
+				56D45E2F274B001600D005CC /* ImageCollectionViewCell.swift in Sources */,
 				56B98FA727459D8B00AC67EE /* UIFonts+Ext.swift in Sources */,
 				56B98F2727459B5C00AC67EE /* MyError.swift in Sources */,
 				56D45E21274AEA4000D005CC /* ReviewsTableViewCell.swift in Sources */,
@@ -620,6 +639,7 @@
 				56B98EEE2745943B00AC67EE /* AppDelegate.swift in Sources */,
 				56D040E427484752003F20AB /* CategoriesViewModel.swift in Sources */,
 				56B98F9927459D8B00AC67EE /* RoundedImageView.swift in Sources */,
+				56D45E29274AFD7800D005CC /* DashPageControl.swift in Sources */,
 				56D040E2274802AD003F20AB /* CategoriesAPIs.swift in Sources */,
 				56B98F9827459D8B00AC67EE /* SelfSizedTableView.swift in Sources */,
 				56B98FA927459D8B00AC67EE /* UIViewController+Ext.swift in Sources */,

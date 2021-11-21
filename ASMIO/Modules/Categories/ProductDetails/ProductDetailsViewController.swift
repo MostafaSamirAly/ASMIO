@@ -6,11 +6,11 @@
 //
 
 import Cosmos
-import UIKit
 
 class ProductDetailsViewController: BaseViewController {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var imagesCollectionView: UICollectionView!
+    @IBOutlet weak var imagePageControl: DashPageControl!
     @IBOutlet weak var discountPercentageLabel: UILabel!
     @IBOutlet weak var brandLabel: UILabel!
     @IBOutlet weak var productNameLabel: UILabel!
@@ -61,9 +61,9 @@ class ProductDetailsViewController: BaseViewController {
         specificationsTableView.delegate = self
         specificationsTableView.dataSource = self
         specificationsTableView.registerCellNib(cellClass: SpecificationsTableViewCell.self)
-//        imagesCollectionView.delegate = self
-//        imagesCollectionView.dataSource = self
-//        imagesCollectionView.registerCellNib(cellClass: ReviewsTableViewCell.self)
+        imagesCollectionView.delegate = self
+        imagesCollectionView.dataSource = self
+        imagesCollectionView.registerCellNib(cellClass: ImageCollectionViewCell.self)
         viewAllReviewsButton.semanticContentAttribute = .forceRightToLeft
         
     }
@@ -100,6 +100,7 @@ class ProductDetailsViewController: BaseViewController {
         overallRating.text = totalRating.description
         ratingCosmosView.rating = totalRating
         totalReviews.text = (product.reviews?.total ?? 0).description + " reviews"
+        imagePageControl.numberOfPages = product.images?.count ?? 0
         imagesCollectionView.reloadData()
         ratingsTableView.reloadData()
         specificationsTableView.reloadData()
@@ -176,5 +177,27 @@ extension ProductDetailsViewController: UITableViewDataSource {
         default:
             return UITableViewCell()
         }
+    }
+}
+
+extension ProductDetailsViewController: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: imagesCollectionView.frame.width,
+                      height: imagesCollectionView.frame.height)
+    }
+}
+
+extension ProductDetailsViewController: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return viewModel.product?.images?.count ?? 0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeue(indexPath: indexPath) as ImageCollectionViewCell
+        cell.configure(with: viewModel.product?.images?[indexPath.row])
+        return cell
+    }
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        imagePageControl.currentPage = indexPath.row + 1
     }
 }
