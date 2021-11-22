@@ -102,8 +102,8 @@
                                         <action selector="shareButtonTapped:" destination="-1" eventType="touchUpInside" id="TYD-nh-z6L"/>
                                     </connections>
                                 </button>
-                                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" hidesForSinglePage="YES" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="0JO-Ux-1Zg" customClass="DashPageControl" customModule="ASMIO" customModuleProvider="target">
-                                    <rect key="frame" x="129.5" y="294" width="155.5" height="26"/>
+                                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" hidesForSinglePage="YES" numberOfPages="1" translatesAutoresizingMaskIntoConstraints="NO" id="0JO-Ux-1Zg" customClass="DashPageControl" customModule="ASMIO" customModuleProvider="target">
+                                    <rect key="frame" x="147" y="294" width="120.5" height="26"/>
                                 </pageControl>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ldU-dV-ygT" customClass="TopRoundedView" customModule="ASMIO" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="330" width="414" height="305.5"/>
@@ -662,6 +662,14 @@
             </connections>
         </tapGestureRecognizer>
     </objects>
+    <designables>
+        <designable name="9ix-dr-Ojc">
+            <size key="intrinsicContentSize" width="65" height="13"/>
+        </designable>
+        <designable name="P8h-OY-Jrb">
+            <size key="intrinsicContentSize" width="120" height="20"/>
+        </designable>
+    </designables>
     <resources>
         <image name="BackBtn" width="32" height="32"/>
         <image name="Cart" width="26" height="26"/>

@@ -12,7 +12,8 @@ extension UIColor {
     static let tabBarBackground = UIColor(named: "TabBarBackGround")
     static let backGroundColor = UIColor(named: "BackgroundColor")
     static let greenColor = UIColor(named: "GreenColor")
-    
+    static let lightTextColor = UIColor(named: "LightTextColor")
+    static let yellowColor = UIColor(named: "YellowColor")
     convenience init(hexString: String) {
         let hex = hexString.trimmingCharacters(in: CharacterSet.alphanumerics.inverted)
         var int = UInt32()
