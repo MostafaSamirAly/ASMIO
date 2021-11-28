@@ -12,6 +12,7 @@ import Alamofire
 enum CategoriesPaths {
     static let productsInCategory = "products"
     static let productDetails = "products/get"
+    static let relatedProducts = "products/related"
     
 }
 
@@ -19,13 +20,16 @@ enum CategoriesApi: Requestable {
     
     case productsInCategory(categoryId: Int,page: Int)
     case productDetails(productId: Int)
+    case relatedProducts(productId: Int)
     
     var path: String {
         switch self {
         case .productsInCategory:
             return CategoriesPaths.productsInCategory
-        case .productDetails(let productId):
+        case .productDetails:
             return CategoriesPaths.productDetails
+        case .relatedProducts:
+            return CategoriesPaths.relatedProducts
         }
     }
     
@@ -34,6 +38,8 @@ enum CategoriesApi: Requestable {
         case .productsInCategory:
             return .get
         case .productDetails:
+            return .get
+        case .relatedProducts:
             return .get
         }
     }
@@ -48,6 +54,8 @@ enum CategoriesApi: Requestable {
             return ["category_id": categoryId,
                     "page": page]
         case .productDetails(let productId):
+            return ["product_id": productId]
+        case .relatedProducts(let productId):
             return ["product_id": productId]
         }
     }

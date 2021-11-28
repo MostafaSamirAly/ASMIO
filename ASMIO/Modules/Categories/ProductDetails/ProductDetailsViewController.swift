@@ -35,6 +35,7 @@ class ProductDetailsViewController: BaseViewController {
     @IBOutlet weak var ratingsTableView: UITableView!
     @IBOutlet weak var totalReviews: UILabel!
     @IBOutlet weak var viewAllReviewsButton: UIButton!
+    @IBOutlet weak var relatedProductsCollectionView: UICollectionView!
     
     let viewModel: ProductViewModel
     
@@ -64,12 +65,16 @@ class ProductDetailsViewController: BaseViewController {
         imagesCollectionView.delegate = self
         imagesCollectionView.dataSource = self
         imagesCollectionView.registerCellNib(cellClass: ImageCollectionViewCell.self)
+        relatedProductsCollectionView.delegate = self
+        relatedProductsCollectionView.dataSource = self
+        relatedProductsCollectionView.registerCellNib(cellClass: ProductCollectionViewCell.self)
         viewAllReviewsButton.semanticContentAttribute = .forceRightToLeft
         
     }
     func setupViewModel() {
         setupViewModel(viewModel: viewModel)
         viewModel.productFetchingSuccess = { [weak self] in
+            self?.scrollView.scrollTo(direction: .top, animated: true)
             self?.setData()
         }
     }
@@ -104,7 +109,7 @@ class ProductDetailsViewController: BaseViewController {
         imagesCollectionView.reloadData()
         ratingsTableView.reloadData()
         specificationsTableView.reloadData()
-        
+        relatedProductsCollectionView.reloadData()
     }
 
     @IBAction func overViewTapped(_ sender: Any) {
@@ -181,23 +186,56 @@ extension ProductDetailsViewController: UITableViewDataSource {
 }
 
 extension ProductDetailsViewController: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if collectionView == relatedProductsCollectionView {
+            viewModel.selectProduct(at: indexPath)
+        }
+    }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: imagesCollectionView.frame.width,
-                      height: imagesCollectionView.frame.height)
+        switch collectionView {
+        case imagesCollectionView:
+            return CGSize(width: imagesCollectionView.frame.width,
+                          height: imagesCollectionView.frame.height)
+        case relatedProductsCollectionView:
+            return CGSize(width: 150,
+                          height: 223)
+        default:
+            return .zero
+        }
     }
 }
 
 extension ProductDetailsViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return viewModel.product?.images?.count ?? 0
+        switch collectionView {
+        case imagesCollectionView:
+            return viewModel.product?.images?.count ?? 0
+        case relatedProductsCollectionView:
+            return viewModel.relatedProducts.count
+        default:
+            return 0
+        }
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeue(indexPath: indexPath) as ImageCollectionViewCell
-        cell.configure(with: viewModel.product?.images?[indexPath.row])
-        return cell
+        switch collectionView {
+        case imagesCollectionView:
+            let cell = collectionView.dequeue(indexPath: indexPath) as ImageCollectionViewCell
+            cell.configure(with: viewModel.product?.images?[indexPath.row])
+            return cell
+        case relatedProductsCollectionView:
+            let cell = collectionView.dequeue(indexPath: indexPath) as ProductCollectionViewCell
+            cell.configure(with: viewModel.relatedProducts[indexPath.row])
+            return cell
+        default:
+            return UICollectionViewCell()
+        }
+        
     }
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        imagePageControl.currentPage = indexPath.row
+        if collectionView == imagesCollectionView {
+            imagePageControl.currentPage = indexPath.row
+        }
     }
 }

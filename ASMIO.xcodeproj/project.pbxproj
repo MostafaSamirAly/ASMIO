@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5659E2D5275359780097A790 /* UIScrollView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5659E2D4275359780097A790 /* UIScrollView+Ext.swift */; };
 		56B98EEE2745943B00AC67EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B98EED2745943B00AC67EE /* AppDelegate.swift */; };
 		56B98EF02745943B00AC67EE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B98EEF2745943B00AC67EE /* SceneDelegate.swift */; };
 		56B98EF72745943D00AC67EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56B98EF62745943D00AC67EE /* Assets.xcassets */; };
@@ -67,6 +68,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5659E2D4275359780097A790 /* UIScrollView+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Ext.swift"; sourceTree = "<group>"; };
 		56B98EEA2745943B00AC67EE /* ASMIO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ASMIO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		56B98EED2745943B00AC67EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		56B98EEF2745943B00AC67EE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -292,6 +294,7 @@
 		56B98F6227459D8B00AC67EE /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				5659E2D4275359780097A790 /* UIScrollView+Ext.swift */,
 				56B98F6327459D8B00AC67EE /* UIImageView+Ext.swift */,
 				56B98F6427459D8B00AC67EE /* UICollectionView+Ext.swift */,
 				56B98F6927459D8B00AC67EE /* UITableView+Ext.swift */,
@@ -653,6 +656,7 @@
 				56B98F2827459B5C00AC67EE /* NetworkConstants.swift in Sources */,
 				56B98EF02745943B00AC67EE /* SceneDelegate.swift in Sources */,
 				56B98FA227459D8B00AC67EE /* UITableView+Ext.swift in Sources */,
+				5659E2D5275359780097A790 /* UIScrollView+Ext.swift in Sources */,
 				56B98F8827459D8B00AC67EE /* MainTabBarController.swift in Sources */,
 				56D040F327498325003F20AB /* SortViewModel.swift in Sources */,
 				56B98FA627459D8B00AC67EE /* UIColor+Ext.swift in Sources */,
