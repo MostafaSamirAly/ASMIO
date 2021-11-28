@@ -88,7 +88,7 @@ class ProductDetailsViewController: BaseViewController {
             originalPriceLabel.isHidden = true
         }
         finalPriceLabel.text = product.finalPrice?.dropFirst(4).description
-        vatLabel.isHidden = product.showVat ?? true
+        vatLabel.isHidden = !(product.showVat ?? true)
         let brand = product.specifications?.first { $0.key?.lowercased().contains("brand") ?? false }
         brandLabel.text = brand?.value
         productNameLabel.text = product.name

@@ -15,7 +15,7 @@ class CategoriesViewModel: BaseViewModel {
         }
     }
     private(set) var sortedProducts = [Product]()
-    private let categoryID = 15
+    private let categoryID = 16
     private(set) var shouldPaginate = false
     private var currentPage = 1
     var reloadData: (() -> Void)?
